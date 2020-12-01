@@ -1,0 +1,28 @@
+{
+	"name": "nuxt-app",
+	"version": "1.0.0",
+	"private": true,
+	"scripts": {
+		"dev": "nuxt",
+		"build": "nuxt build",
+		"start": "nuxt start",
+		"generate": "nuxt generate"
+	},
+	"dependencies": {
+		"core-js": "^3.6.5",
+		"express": "^4.17.1",
+		"mailchimp-api-v3": "^1.14.0",
+		"nuxt": "^2.14.6",
+		"vee-validate": "^3.4.5",
+		"vue-slick-carousel": "^1.0.6"
+	},
+	"devDependencies": {
+		"@nuxtjs/axios": "^5.12.2",
+		"@nuxtjs/style-resources": "^1.0.0",
+		"axios": "^0.21.0",
+		"node-sass": "^5.0.0",
+		"sass-loader": "^10.1.0",
+		"vee-validate": "^3.4.5",
+		"vue-form-generator": "^2.3.4"
+	}
+}

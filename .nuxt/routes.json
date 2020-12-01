@@ -1,0 +1,23 @@
+[
+  {
+    "name": "user",
+    "path": "/user",
+    "component": "/Users/lukaszskiba/Desktop/headless/pages/user/index.vue",
+    "chunkName": "pages/user/index",
+    "_name": "_935e7ee2"
+  },
+  {
+    "name": "user-id",
+    "path": "/user/:id",
+    "component": "/Users/lukaszskiba/Desktop/headless/pages/user/_id/index.vue",
+    "chunkName": "pages/user/_id/index",
+    "_name": "_1ea8fbfa"
+  },
+  {
+    "name": "all",
+    "path": "/*",
+    "component": "/Users/lukaszskiba/Desktop/headless/pages/_.vue",
+    "chunkName": "pages/_",
+    "_name": "_6346d1ee"
+  }
+]
