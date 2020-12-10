@@ -5,7 +5,7 @@ import ClientOnly from 'vue-client-only'
 import NoSsr from 'vue-no-ssr'
 import { createRouter } from './router.js'
 import NuxtChild from './components/nuxt-child.js'
-import NuxtError from '../layouts/error.vue'
+import NuxtError from '..\\layouts\\error.vue'
 import Nuxt from './components/nuxt.js'
 import App from './App.js'
 import { setContext, getLocation, getRouteData, normalizeError } from './utils'
@@ -13,9 +13,9 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_27a73ef2 from 'nuxt_plugin_plugin_27a73ef2' // Source: ./components/plugin.js (mode: 'all')
-import nuxt_plugin_axios_40adde1d from 'nuxt_plugin_axios_40adde1d' // Source: ./axios.js (mode: 'all')
-import nuxt_plugin_veevalidate_6e5ad03a from 'nuxt_plugin_veevalidate_6e5ad03a' // Source: ../plugins/vee-validate (mode: 'client')
+import nuxt_plugin_plugin_5c792f7c from 'nuxt_plugin_plugin_5c792f7c' // Source: .\\components\\plugin.js (mode: 'all')
+import nuxt_plugin_axios_153efd9f from 'nuxt_plugin_axios_153efd9f' // Source: .\\axios.js (mode: 'all')
+import nuxt_plugin_veevalidate_6e5ad03a from 'nuxt_plugin_veevalidate_6e5ad03a' // Source: ..\\plugins\\vee-validate (mode: 'client')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -204,12 +204,12 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_27a73ef2 === 'function') {
-    await nuxt_plugin_plugin_27a73ef2(app.context, inject)
+  if (typeof nuxt_plugin_plugin_5c792f7c === 'function') {
+    await nuxt_plugin_plugin_5c792f7c(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_axios_40adde1d === 'function') {
-    await nuxt_plugin_axios_40adde1d(app.context, inject)
+  if (typeof nuxt_plugin_axios_153efd9f === 'function') {
+    await nuxt_plugin_axios_153efd9f(app.context, inject)
   }
 
   if (process.client && typeof nuxt_plugin_veevalidate_6e5ad03a === 'function') {

@@ -29,6 +29,12 @@
   "LazyAcfPage": {
     "description": "Auto imported from components/AcfPage.vue"
   },
+  "Blog": {
+    "description": "Auto imported from components/Blog.vue"
+  },
+  "LazyBlog": {
+    "description": "Auto imported from components/Blog.vue"
+  },
   "ContactForm": {
     "description": "Auto imported from components/ContactForm.vue"
   },

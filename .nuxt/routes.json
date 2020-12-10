@@ -2,22 +2,22 @@
   {
     "name": "user",
     "path": "/user",
-    "component": "/Users/lukaszskiba/Desktop/headless/pages/user/index.vue",
+    "component": "C:\\\\Users\\\\skiba\\\\OneDrive\\\\Pulpit\\\\cmsV\\\\headless\\\\pages\\\\user\\\\index.vue",
     "chunkName": "pages/user/index",
-    "_name": "_935e7ee2"
+    "_name": "_7874eee4"
   },
   {
     "name": "user-id",
     "path": "/user/:id",
-    "component": "/Users/lukaszskiba/Desktop/headless/pages/user/_id/index.vue",
+    "component": "C:\\\\Users\\\\skiba\\\\OneDrive\\\\Pulpit\\\\cmsV\\\\headless\\\\pages\\\\user\\\\_id\\\\index.vue",
     "chunkName": "pages/user/_id/index",
-    "_name": "_1ea8fbfa"
+    "_name": "_54d02568"
   },
   {
     "name": "all",
     "path": "/*",
-    "component": "/Users/lukaszskiba/Desktop/headless/pages/_.vue",
+    "component": "C:\\\\Users\\\\skiba\\\\OneDrive\\\\Pulpit\\\\cmsV\\\\headless\\\\pages\\\\_.vue",
     "chunkName": "pages/_",
-    "_name": "_6346d1ee"
+    "_name": "_7b115c86"
   }
 ]

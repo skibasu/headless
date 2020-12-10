@@ -1,11 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import { normalizeURL } from '@nuxt/ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _935e7ee2 = () => interopDefault(import('../pages/user/index.vue' /* webpackChunkName: "pages/user/index" */))
-const _1ea8fbfa = () => interopDefault(import('../pages/user/_id/index.vue' /* webpackChunkName: "pages/user/_id/index" */))
-const _6346d1ee = () => interopDefault(import('../pages/_.vue' /* webpackChunkName: "pages/_" */))
+const _7874eee4 = () => interopDefault(import('..\\pages\\user\\index.vue' /* webpackChunkName: "pages/user/index" */))
+const _54d02568 = () => interopDefault(import('..\\pages\\user\\_id\\index.vue' /* webpackChunkName: "pages/user/_id/index" */))
+const _7b115c86 = () => interopDefault(import('..\\pages\\_.vue' /* webpackChunkName: "pages/_" */))
 
 // TODO: remove in Nuxt 3
 const emptyFn = () => {}
@@ -18,28 +19,50 @@ Vue.use(Router)
 
 export const routerOptions = {
   mode: 'history',
-  base: decodeURI('/'),
+  base: '/',
   linkActiveClass: 'active',
   linkExactActiveClass: 'nuxt-link-exact-active',
   scrollBehavior,
 
   routes: [{
     path: "/user",
-    component: _935e7ee2,
+    component: _7874eee4,
     name: "user"
   }, {
     path: "/user/:id",
-    component: _1ea8fbfa,
+    component: _54d02568,
     name: "user-id"
   }, {
     path: "/*",
-    component: _6346d1ee,
+    component: _7b115c86,
     name: "all"
   }],
 
   fallback: false
 }
 
+function decodeObj(obj) {
+  for (const key in obj) {
+    if (typeof obj[key] === 'string') {
+      obj[key] = decodeURIComponent(obj[key])
+    }
+  }
+}
+
 export function createRouter () {
-  return new Router(routerOptions)
+  const router = new Router(routerOptions)
+
+  const resolve = router.resolve.bind(router)
+  router.resolve = (to, current, append) => {
+    if (typeof to === 'string') {
+      to = normalizeURL(to)
+    }
+    const r = resolve(to, current, append)
+    if (r && r.resolved && r.resolved.query) {
+      decodeObj(r.resolved.query)
+    }
+    return r
+  }
+
+  return router
 }

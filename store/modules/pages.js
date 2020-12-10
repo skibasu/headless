@@ -1,30 +1,30 @@
 const state = () => ({
 
-    pages: []
+   pages: []
 });
 
 const getters = {
-    getPages: (state) => state.pages,
+   getPages: (state) => state.pages,
 }
 
 const mutations = {
-    setPages: (state, payload) => {
-        state.pages = payload;
-    },
+   setPages: (state, payload) => {
+      state.pages = payload;
+   },
 }
 
 const actions = {
-    nuxtServerInit(vuexContext, context) {
+   nuxtServerInit(vuexContext, context) {
 
-        return context.app.$axios.get('/wp-json/wp/v2/pages').then(res => {
-            vuexContext.commit('setPages', res.data);
-        })
-    },
+      return context.app.$axios.get('/wp-json/wp/v2/pages?per_page=100').then(res => {
+         vuexContext.commit('setPages', res.data);
+      })
+   },
 }
 
 export default {
-    state,
-    getters,
-    actions,
-    mutations,
+   state,
+   getters,
+   actions,
+   mutations,
 }
